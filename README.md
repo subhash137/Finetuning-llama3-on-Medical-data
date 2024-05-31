@@ -38,6 +38,7 @@ To install the required dependencies, run the following commands:
 pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
 pip install --no-deps trl peft accelerate bitsandbytes
 pip install xformers transformers datasets torch trl
+```
 
 ## Resources
 The finetuning process requires significant computational resources. In this project, the finetuning is performed on a Google Colab instance with a T4 GPU (15GB VRAM). While this configuration is sufficient for finetuning, it may not provide optimal performance for faster inference.It needs more than 15gb vram for average inference.
@@ -48,3 +49,4 @@ To save the model in GGUF format, you can use the following code:
 
 ```python
 model.save_pretrained_gguf("dir", tokenizer, quantization_method="q4_k_m")
+```
